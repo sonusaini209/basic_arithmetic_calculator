@@ -18,7 +18,10 @@ option = st.selectbox(
 
 def calculator(a, b, option):
     if option == 'Division':
-        return a / b
+        if b == 0:
+            return 'Cannot divide by zero!'
+        else:
+            return a / b
     elif option == 'Multiplication':
         return a * b
     elif option == 'Addition':
@@ -31,10 +34,6 @@ def calculator(a, b, option):
 # Example usage:
 result = calculator(a, b, option)
 st.write(option,result)
-
-
-#st.write('option :  ', a/b)
-
 
 
 
